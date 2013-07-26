@@ -1,0 +1,15 @@
+{
+  "name": "meetup",
+  "licenses": [],
+  "main": "lib/listen",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "dependencies": {
+    "express": "*",
+    "underscore": "*",
+    "ejs": "*",
+    "meetup-api": "git://github.com/pyronicide/meetup-api.git"
+  }
+}
