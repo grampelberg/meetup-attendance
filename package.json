@@ -1,5 +1,17 @@
 {
   "name": "meetup",
+  "homepage": "https://github.com/pyronicide/meetup-attendance",
+  "author": {
+    "name": "Thomas Rampelberg",
+    "email": "thomas@saunter.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pyronicide/meetup-attendance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pyronicide/meetup-attendance/issues"
+  },
   "licenses": [],
   "main": "lib/listen",
   "engines": {
