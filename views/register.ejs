@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Meetup Check-in</title>
+
   	<link rel='stylesheet' href='/style/bootstrap.min.css' />
   	<link rel="stylesheet" href="/style/bootstrap-responsive.min.css" />
   	<link rel="stylesheet" href="/style/font-awesome.min.css" />
+    <link rel="stylesheet" href="/style/screen.css" />
 
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
@@ -14,20 +17,34 @@
   	</script>
   </head>
   <body>
-  <input type="text" name="name">
-  <% _.each(attendees, function(rsvp, name) { %>
-  <div class="media member">
-    <a class="pull-left">
-      <img class="media-object"
-           src="<%= thumb(rsvp) %>">
-    </a>
-    <div class="media-body">
-      <a href="?member_id=<%= rsvp.member.member_id %>">
-      <h4 class="media-heading name"><%= rsvp.member.name %></h4>
-    </a>
+
+    <div class="container">
+      <div class="row-fluid">
+
+        <header class="span6 offset3">
+          <div class="logo"></div>
+        </header>
+        
+        <div class="span6 offset3">
+          <input type="text" name="name" class="name-input" />
+          
+          <% _.each(attendees, function(rsvp, name) { %>
+          <div class="media member">
+            <a class="pull-left">
+              <img class="media-object"
+                   src="<%= thumb(rsvp) %>">
+            </a>
+            <div class="media-body">
+              <a href="?member_id=<%= rsvp.member.member_id %>">
+              <h4 class="media-heading name"><%= rsvp.member.name %></h4>
+            </a>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+
+      </div>
     </div>
-  </div>
-  <% }); %>
 
 <!--   	<form class="form-inline" autocomplete="off">
   		<input type="text" placeholder="Enter your name" name="name"
