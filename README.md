@@ -1,3 +1,7 @@
+# Development
+
+To run: `GROUP_NAME=my-group KEY=MEETUP-API-KEY node app.js`
+
 # Setup
 
 - Clone this repo locally via. git:
